@@ -6,6 +6,8 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+
+
   <script type="text/template" id="profilecardTmpl">
 <% _.each(userDataArray, function(element, index, list) { %>
     <div class="profileCardWrapper">
@@ -21,9 +23,9 @@
       </div>
       <div class="friendsList">
         <ul>
-          <li><a href=""><h3><%= element.followers %></h3><p>Followers</p></a></li>
-          <li><a href=""><h3>0</h3><p>Starred</p></a></li>
-          <li><a href=""><h3><%= element.following %></h3><p>Following</p></a></li>
+          <li><a href="https://github.com/crotten/followers"><h3><%= element.followers %></h3><p>Followers</p></a></li>
+          <li><a href="https://github.com/stars"><h3>0</h3><p>Starred</p></a></li>
+          <li><a href="https://github.com/crotten/following"><h3><%= element.following %></h3><p>Following</p></a></li>
         </ul>
       </div>
     </div>
@@ -35,7 +37,7 @@
   <% _.each(orgDataArray, function(element, index, list) { %>
     <div class="orgsSection">
       <p>Organizations</p>
-      <a href=""><img src="<%= element.avatar_url %>" alt=""></a>
+      <a href="https://github.com/tiy-chs-q4-fee"><img src="<%= element.avatar_url %>" alt=""></a>
     </div>
 <% }); %>
   </script>
@@ -57,13 +59,85 @@
           <li><a href="<%= element.forks_url %>"><span class="octicon octicon-git-branch"></span><%= element.forks_count %></a></li>
         </ul>
       </div>
-
-
-
     </div>
   <% }); %>
 
   </script>
+
+
+  <script type="text/template" id="pEventsTmpl">
+  <% _.each(userEventsArray, function(element, index, list) { %>
+    <% if (element.type === "PushEvent") { %>
+    <div class="pEventsTmplWrapper">
+      <div class="gitimage">
+      <span class="mega-octicon octicon-git-commit"></span>
+      </div>
+      <div class="pushEventAside">
+        <div class="eventsTime">
+          <time>
+            <span><%= element.created_at %></span>
+          </time>
+        </div>
+        <div class="eventsTitle">
+          <a href="<%= element.actor.url %>"><%= element.actor.login %></a>
+          <span>pushed to</span>
+          <a href="">master</a>
+          <span>at</span>
+          <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
+        </div>
+        <div class="eventsDetails">
+          <a href="">
+            <img src="<%= element.avatar_url %>" alt="">
+          </a>
+          <div class="eventCommits">
+            <ul>
+              <li><a href="<%= element.actor.url %>">
+                  <img class="eclimg" src="<%= element.actor.avatar_url %>" alt=""></a>
+              </li>
+              <li>
+                <img class="ecsimg" src="<%= element.actor.avatar_url %>" alt="">
+              </li>
+              <li>
+                <code>
+                  <a href=""><%= element.payload.head %></a>
+                </code>
+              </li>
+              <li>
+                <div class="eventMessage">
+                  <span><%= element.payload.commits.message %></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } else if (element.payload.ref_type === "repository") { %>
+      <span class="octicon octicon-repo"></span>
+      <div class="createdRepo">
+        <a href="<%= element.actor.url %>"><%= element.actor.login %></a>
+        <span>created repository</span>
+        <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
+        <span class="createdRepoTime"><%= element.created_at %></span>
+      </div>
+    <% } else { %>
+      <span class="octicon octicon-git-branch"></span>
+      <p>
+        <a href="<%= element.actor.url %>"><%= element.actor.login %>
+        </a>
+        created branch
+        <a href=""><span class="octicon octicon-git-branch"></span>master
+        </a>
+        at
+        <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
+        <span><%= element.created_at %></span>
+      </p>
+
+    <% } %>
+  <% }); %>
+
+  </script>
+
 </head>
 <body>
   <div class="wrapper">
@@ -94,8 +168,8 @@
         </div>
 
         <div id="tab3" class="tab">
-            <p>Tab #3 content goes here!</p>
-            <p>Donec pulvinar </p>
+            <br>
+            <br>
         </div>
     </div>
 </div>

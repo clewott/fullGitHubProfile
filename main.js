@@ -13,6 +13,8 @@ $(document).ready(function() {
 
         homePage.renderRepos($("#tab2"));
 
+        homePage.renderEvents($("#tab3"));
+
 
       },
       initEvents: function() {},
@@ -32,6 +34,10 @@ $(document).ready(function() {
       },
       renderRepos: function($target) {
         homePage.render($("#reposTmpl").html(), userReposArray, $target);
+
+      },
+      renderEvents: function($target) {
+        homePage.render($("#pEventsTmpl").html(),userEventsArray, $target);
 
       },
 
