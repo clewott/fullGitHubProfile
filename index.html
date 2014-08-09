@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Profile</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+  <script type="text/template" id="profilecardTmpl">
+<% _.each(userDataArray, function(element, index, list) { %>
+    <div class="profileCardWrapper">
+      <div class="mainimg">
+      <img src="<%= element.avatar_url %>" alt="">
+      </div>
+      <div class="names">
+        <h2><%= element.name %></h2>
+        <p><%= element.login %></p>
+      </div>
+      <div class="time">
+        <p><span class="octicon octicon-clock"> Joined on Jul 22, 2014</p>
+      </div>
+      <div class="friendsList">
+        <ul>
+          <li><a href=""><h3><%= element.followers %></h3><p>Followers</p></a></li>
+          <li><a href=""><h3>0</h3><p>Starred</p></a></li>
+          <li><a href=""><h3><%= element.following %></h3><p>Following</p></a></li>
+        </ul>
+      </div>
+    </div>
+  <% }); %>
+  </script>
+
+
+  <script type="text/template" id="orgsTmpl">
+  <% _.each(orgDataArray, function(element, index, list) { %>
+    <div class="orgsSection">
+      <p>Organizations</p>
+      <a href=""><img src="<%= element.avatar_url %>" alt=""></a>
+    </div>
+<% }); %>
+  </script>
+
+  <script type="text/template" id="reposTmpl">
+  <% _.each(userReposArray, function(element, index, list) { %>
+    <div class="reposTmplWrapper">
+      <div class="reposImg">
+        <span class="mega-octicon octicon-repo"></span>
+      </div>
+      <div class="reposText">
+        <a href=""><%= element.name %></a>
+        <p><%= element.updated_at %></p>
+      </div>
+      <div class="reposList">
+        <ul>
+          <li><%= element.language %></li>
+          <li><a href="<%= element.stargazers_url %>"><span class="octicon octicon-star"></span><%= element.stargazers_count %></a></li>
+          <li><a href="<%= element.forks_url %>"><span class="octicon octicon-git-branch"></span><%= element.forks_count %></a></li>
+        </ul>
+      </div>
+
+
+
+    </div>
+  <% }); %>
+
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="section">
+        <div class="sectionTop">
+
+        </div>
+        <div class="sectionBottom">
+
+        </div>
+    </div>
+    <div class="aside">
+      <nav>
+        <a href=""><span class="octicon octicon-diff-added"></span>Contributions</tab>
+        <a href=""><span class="octicon octicon-repo"></span>Repositories</a>
+        <a href=""><span class="octicon octicon-rss"></span>Public Activity</a>
+      </nav>
+
+
+    </div>
+
+  </div>
+
+
+
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="templates.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

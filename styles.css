@@ -1,0 +1,199 @@
+/* ----- Tabs -----
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+----- Tab Links -----
+Clearfix
+.tab-links:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+
+.tab-links li {
+  margin:0px 5px;
+  float:left;
+  list-style:none;
+}
+
+.tab-links a {
+  padding:9px 15px;
+  display:inline-block;
+  border-radius:3px 3px 0px 0px;
+  border: 1px solid #7FB5DA;
+  border-bottom: none;
+  font-size:16px;
+  color:#4c4c4c;
+  transition:all linear 0.15s;
+}
+
+li.active a {
+  background:#fff;
+  color:#4c4c4c;
+}
+
+----- Content of Tabs -----
+.tab-content {
+  padding:15px;
+  border-radius:3px;
+  box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+  background:#fff;
+}
+
+.tab {
+  display:none;
+}
+
+.tab.active {
+  display:block;
+} */
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+
+.section {
+  width: 21%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+
+.aside {
+  width: 73%;
+  display: inline-block;
+}
+
+.mainimg img {
+  height: 230px;
+  width: 230px;
+}
+
+.names h2 {
+  margin: 10px 0 0 0;
+  font-size: 1.75em;
+}
+
+.names p {
+  margin: 0;
+  padding-bottom: 10px;
+  color: grey;
+  font-size: 1.25em;
+  border-bottom: 1px solid grey;
+  font-weight: normal;
+}
+
+.time p {
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+}
+
+.friendsList ul {
+  list-style-type: none;
+  padding: 0px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+
+.friendsList li {
+  display: inline-block;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.friendsList a {
+  text-decoration: none;
+  color: black;
+}
+
+.friendsList a:hover {
+  color: #4183C4;
+}
+
+.friendsList h3 {
+  font-size: 2em;
+  margin: 0px;
+}
+
+.friendsList p {
+  margin: 0px;
+  font-size: .7em;
+}
+
+.orgsSection p {
+  font-size: 1.25em;
+}
+
+.orgsSection img {
+  height: 36px;
+  width: 36px;
+}
+
+.reposTmplWrapper {
+  border-bottom: 1px solid grey;
+  height: 100px;
+}
+
+.reposImg {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-left: 5px;
+  color: grey;
+}
+
+.reposText {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.reposText a {
+  margin: 0px;
+  font-size: 1.35em;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #4183C4;
+  font-weight: bold;
+}
+
+.reposText a:hover {
+  text-decoration: underline;
+}
+
+.reposText p {
+  padding-top: 10px;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+
+.reposList {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  font-size: .75em;
+}
+
+
+.reposList li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 10px;
+  color: grey;
+}
+
+.reposList a {
+  text-decoration: none;
+  color: grey;
+}
+
+.reposList a:hover {
+  color: #4183C4;
+}
