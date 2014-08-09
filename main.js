@@ -11,7 +11,7 @@ $(document).ready(function() {
 
         homePage.renderPictures($(".sectionBottom"));
 
-        homePage.renderRepos($(".aside"));
+        homePage.renderRepos($("#tab2"));
 
 
       },

@@ -1,4 +1,4 @@
-/* ----- Tabs -----
+----- Tabs -----
 .tabs {
     width:100%;
     display:inline-block;
@@ -12,8 +12,9 @@ Clearfix
   content:'';
 }
 
+
 .tab-links li {
-  margin:0px 5px;
+  margin:0px;
   float:left;
   list-style:none;
 }
@@ -22,16 +23,18 @@ Clearfix
   padding:9px 15px;
   display:inline-block;
   border-radius:3px 3px 0px 0px;
-  border: 1px solid #7FB5DA;
-  border-bottom: none;
+  border-bottom: 1px solid grey;
   font-size:16px;
   color:#4c4c4c;
   transition:all linear 0.15s;
+  text-decoration: none;
 }
 
 li.active a {
   background:#fff;
   color:#4c4c4c;
+  border: 1px solid #BBBBBB;
+  border-bottom: none;
 }
 
 ----- Content of Tabs -----
@@ -48,7 +51,7 @@ li.active a {
 
 .tab.active {
   display:block;
-} */
+}
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -86,12 +89,12 @@ html {
   padding-bottom: 10px;
   color: grey;
   font-size: 1.25em;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #BBBBBB;
   font-weight: normal;
 }
 
 .time p {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #BBBBBB;
   padding-bottom: 15px;
 }
 
@@ -99,7 +102,7 @@ html {
   list-style-type: none;
   padding: 0px;
   padding-bottom: 15px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #BBBBBB;
 }
 
 .friendsList li {
@@ -137,7 +140,7 @@ html {
 }
 
 .reposTmplWrapper {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #BBBBBB;
   height: 100px;
 }
 
@@ -146,7 +149,7 @@ html {
   vertical-align: top;
   margin-top: 15px;
   margin-left: 5px;
-  color: grey;
+  color: #BBBBBB;
 }
 
 .reposText {
@@ -186,12 +189,12 @@ html {
   list-style-type: none;
   display: inline-block;
   padding-right: 10px;
-  color: grey;
+  color: #BBBBBB;
 }
 
 .reposList a {
   text-decoration: none;
-  color: grey;
+  color: #BBBBBB;
 }
 
 .reposList a:hover {
