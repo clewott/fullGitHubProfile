@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.tabs .tab-links a').on('click', function(event)  {
-        var currentAttrValue = jQuery(this).attr('href');
+        var currentAttrValue = $(this).attr('href');
 
         // Show/Hide Tabs
         $('.tabs ' + currentAttrValue).show().siblings().hide();
@@ -10,4 +10,5 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
+
 });

@@ -116,9 +116,8 @@ html {
   padding:9px 15px;
   display:inline-block;
   border-radius:3px 3px 0px 0px;
-  font-size:16px;
-  color:#4c4c4c;
-  transition:all linear 0.15s;
+  font-size:.8em;
+  color:#666666;
   text-decoration: none;
 }
 
@@ -143,6 +142,96 @@ li.active a {
 
 .tab.active {
   display:block;
+}
+
+.editProfile {
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  padding: 7px 10px;
+  margin-left: 269px;
+  color: #333333;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.editProfile:hover {
+  background-color: #E8E8E8;
+}
+
+.tab-links.editProdile {
+  padding: 7px 10px;
+}
+
+.searchBar {
+  border-bottom: 1px solid #BBB;
+}
+
+li .activeText a {
+  color: black;
+}
+
+.searchBar ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.searchBar li {
+  display: inline-block;
+}
+
+.searchBar li a {
+  color: #4186CD;
+  text-decoration: none;
+  padding-left: 6px;
+}
+
+.searchBar li a:hover {
+  text-decoration: underline
+}
+
+.searchBar li form input {
+  height: 30px;
+  border-radius: 5px;
+  width: 260px;
+  border: 1px solid #CCCCCC;
+  font-size: .8em;
+}
+
+.searchBar li form input.searchButton {
+  width: 70px;
+  height: 35px;
+  background-color: #F6F6F6;
+  border: 1px solid #CCCCCC;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.searchBar li form input.searchButton:hover {
+  background-color: #E0E0E0;
+}
+
+.searchBar li.allli {
+  padding-left: 25px;
+}
+
+.newButton {
+  padding-left: 10px;
+}
+
+.newButton button {
+  background-color: #76C759;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: white;
+  border: 1px solid green;
+}
+
+.newButton button:hover {
+  background-color: #59A23F;
+}
+.newButton span {
+  padding-right: 5px;
 }
 
 .reposTmplWrapper {

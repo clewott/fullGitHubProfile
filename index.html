@@ -145,9 +145,18 @@
     <div class="aside">
       <div class="tabs">
     <ul class="tab-links">
-        <li class="active"><a href="#tab1"><span class="octicon octicon-diff-added"></span> Contributions</a></li>
-        <li><a href="#tab2"><span class="octicon octicon-repo"></span> Repositories</a></li>
-        <li><a href="#tab3"><span class="octicon octicon-rss"></span> Public Activity</a></li>
+        <li class="active">
+          <a href="#tab1"><span class="octicon octicon-diff-added"></span> Contributions</a>
+        </li>
+        <li>
+          <a href="#tab2"><span class="octicon octicon-repo"></span> Repositories</a>
+        </li>
+        <li>
+          <a href="#tab3"><span class="octicon octicon-rss"></span> Public Activity</a>
+        </li>
+        <li>
+          <button class="editProfile" href=""><span class="octicon octicon-pencil"></span> Edit Profile</button>
+        </li>
     </ul>
 
     <div class="tab-content">
@@ -156,6 +165,35 @@
         </div>
 
         <div id="tab2" class="tab">
+          <div class="searchBar">
+            <ul>
+              <li>
+                <form>
+                  <input type="text" placeholder="Find a repository..." required>
+                  <input class="searchButton" type="button" value="Search">
+</form>
+              </li>
+              <li class="allli"><a href="">All</a></li>
+              <li>
+                <a href="">Public</a>
+              </li>
+              <li>
+                <a href="">Private</a>
+              </li>
+              <li>
+                <a href="">Sources</a>
+              </li>
+              <li>
+                <a href="">Forks</a>
+                </li>
+              <li>
+                <a href="">Mirrors</a>
+              </li>
+              <li class="newButton">
+                  <button><span class="octicon octicon-repo"></span>New</button>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div id="tab3" class="tab">
