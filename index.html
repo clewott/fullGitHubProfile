@@ -86,9 +86,6 @@
           <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
         </div>
         <div class="eventsDetails">
-          <a href="">
-            <img src="<%= element.avatar_url %>" alt="">
-          </a>
           <div class="eventCommits">
             <ul>
               <li><a href="<%= element.actor.url %>">
@@ -98,14 +95,10 @@
                 <img class="ecsimg" src="<%= element.actor.avatar_url %>" alt="">
               </li>
               <li>
-                <code>
-                  <a href=""><%= element.payload.head %></a>
-                </code>
+                <a href=""><%= element.payload.head %></a>
               </li>
               <li>
-                <div class="eventMessage">
-                  <span><%= element.payload.commits.message %></span>
-                </div>
+                <span><%= element.payload.commits.message %></span>
               </li>
             </ul>
           </div>
@@ -113,25 +106,25 @@
       </div>
     </div>
     <% } else if (element.payload.ref_type === "repository") { %>
-      <span class="octicon octicon-repo"></span>
       <div class="createdRepo">
-        <a href="<%= element.actor.url %>"><%= element.actor.login %></a>
-        <span>created repository</span>
+        <span class="octicon octicon-repo"></span>
+        <a class="createdRepoLink" href="<%= element.actor.url %>"><%= element.actor.login %></a>
+        <span class="createdRepoText">created repository</span>
         <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
         <span class="createdRepoTime"><%= element.created_at %></span>
       </div>
     <% } else { %>
-      <span class="octicon octicon-git-branch"></span>
-      <p>
-        <a href="<%= element.actor.url %>"><%= element.actor.login %>
+      <div class="branchMaster">
+        <span class="octicon octicon-git-branch"></span>
+        <a class="branchMasterLink" href="<%= element.actor.url %>"><%=element.actor.login%>
         </a>
         created branch
-        <a href=""><span class="octicon octicon-git-branch"></span>master
+        <a class="masterButton" href=""><span class="octicon octicon-git-branch"></span>master
         </a>
-        at
+        <span style="padding-left: 2px; color: #66666F;">at</span>
         <a href="<%= element.repo.url %>"><%= element.repo.name %></a>
         <span><%= element.created_at %></span>
-      </p>
+      </div>
 
     <% } %>
   <% }); %>
@@ -163,13 +156,9 @@
         </div>
 
         <div id="tab2" class="tab">
-            <br>
-            <br>
         </div>
 
         <div id="tab3" class="tab">
-            <br>
-            <br>
         </div>
     </div>
 </div>
@@ -184,7 +173,6 @@
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
 <script type="text/javascript" src="data.js"></script>
-<script type="text/javascript" src="templates.js"></script>
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </body>

@@ -9,15 +9,16 @@ html {
 
 
 .section {
-  width: 21%;
+  width: 230px;
   display: inline-block;
   vertical-align: top;
   margin-left: 30px;
 }
 
 .aside {
-  width: 73%;
+  width: 70%;
   display: inline-block;
+  margin-left: 30px;
 
 }
 
@@ -93,18 +94,21 @@ html {
 }
 
 ----- Tab Links -----
-Clearfix
+/* Clearfix */
 .tab-links:after {
   display:block;
-  clear:both;
-  content:'';
+  /* clear:both; */
+  /* content:''; */
 }
 
-
+.tab-links {
+  border-bottom: 1px solid #BBB;
+  padding: 0px;
+}
 
 .tab-links li {
   margin:0px;
-  float:left;
+  display:inline-block;
   list-style:none;
 }
 
@@ -112,7 +116,6 @@ Clearfix
   padding:9px 15px;
   display:inline-block;
   border-radius:3px 3px 0px 0px;
-  border-bottom: 1px solid grey;
   font-size:16px;
   color:#4c4c4c;
   transition:all linear 0.15s;
@@ -204,6 +207,11 @@ li.active a {
   color: #4183C4;
 }
 
+.pEventsTmplWrapper {
+  border-bottom: 1px solid #BBBBBB;
+  padding-top: 15px;
+}
+
 .pEventsTmplWrapper span {
   color: #BBBBBB;
 }
@@ -245,8 +253,84 @@ li.active a {
 
 .eventCommits ul {
   list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 15px;
 }
 
 .eventCommits li {
   display: inline-block;
+  vertical-align: top;
+}
+
+.eventCommits li a {
+  text-decoration: none;
+  font-size: .7em;
+}
+
+.eventCommits li a:hover {
+  text-decoration: underline;
+}
+
+.createdRepo {
+  border-bottom: 1px solid #BBB;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: .8em;
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.createdRepo span {
+  color: #BBBBC3;
+}
+
+.createdRepoLink {
+  padding-left: 17px;
+}
+
+.createdRepo a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+.createdRepo a:hover {
+  text-decoration: underline;
+}
+
+.createdRepo .createdRepoText {
+  color: #66666F;
+}
+
+.branchMaster {
+  border-bottom: 1px solid #BBB;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: .8em;
+  font-weight: normal;
+  padding-left: 10px;
+  color: #66666F;
+}
+
+.branchMaster span {
+  color: #BBBBC3;
+}
+
+.branchMasterLink {
+  padding-left: 19px;
+}
+
+.branchMaster a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+.branchMaster a:hover {
+  text-decoration: underline;
+}
+
+.masterButton {
+  background-color: #E8F1F6;
+  padding: 4px;
+  border-radius: 4px;
 }
