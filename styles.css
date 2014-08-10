@@ -167,10 +167,6 @@ li.active a {
   border-bottom: 1px solid #BBB;
 }
 
-li .activeText a {
-  color: black;
-}
-
 .searchBar ul {
   list-style-type: none;
   padding: 0px;
@@ -244,6 +240,7 @@ li .activeText a {
   vertical-align: top;
   margin-top: 15px;
   margin-left: 5px;
+  padding-top: 5px;
   color: #BBBBBB;
 }
 
@@ -255,7 +252,7 @@ li .activeText a {
 .reposText a {
   margin: 0px;
   font-size: 1.35em;
-  padding-left: 20px;
+  padding-left: 12px;
   text-decoration: none;
   color: #4183C4;
   font-weight: bold;
@@ -266,9 +263,11 @@ li .activeText a {
 }
 
 .reposText p {
-  padding-top: 10px;
+  padding-top: 5px;
   margin: 0px;
-  padding-left: 20px;
+  padding-left: 12px;
+  font-size: .7em;
+  color: #BBB;
 }
 
 
@@ -317,8 +316,12 @@ li .activeText a {
 }
 
 .eventsTime span {
-  color: #BBBBC3;
+  color: #BBB;
   font-size: .7em;
+}
+
+.eventsTitle {
+  font-size: .9em;
 }
 
 .eventsTitle a {
@@ -328,6 +331,10 @@ li .activeText a {
 
 .eventsTitle a:hover {
   text-decoration: underline;
+}
+
+.eventsTitle span {
+  color: black;
 }
 
 .eclimg {
@@ -359,6 +366,12 @@ li .activeText a {
 
 .eventCommits li a:hover {
   text-decoration: underline;
+}
+
+.eventCommits li span {
+  font-size: .8em;
+  color: #66666F;
+  font-weight: lighter;
 }
 
 .createdRepo {
@@ -422,4 +435,8 @@ li .activeText a {
   background-color: #E8F1F6;
   padding: 4px;
   border-radius: 4px;
+}
+
+li.searchBarOptions a {
+  color: black;
 }
